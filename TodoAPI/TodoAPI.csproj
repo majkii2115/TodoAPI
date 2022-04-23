@@ -16,9 +16,12 @@
 
   <ItemGroup>
     <PackageReference Include="ServiceStack" Version="6.*" />
+    <PackageReference Include="ServiceStack.OrmLite" Version="6.0.2" />
+    <PackageReference Include="ServiceStack.OrmLite.PostgreSQL" Version="6.0.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TodoAPI.DbModels\TodoAPI.DbModels.csproj" />
     <ProjectReference Include="..\TodoAPI.ServiceInterface\TodoAPI.ServiceInterface.csproj" />
     <ProjectReference Include="..\TodoAPI.ServiceModel\TodoAPI.ServiceModel.csproj" />
   </ItemGroup>
