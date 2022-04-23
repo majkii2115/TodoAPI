@@ -47,7 +47,7 @@ public class TodosService : Service
         var todo = new Todo
         {
             Title = createTodoRequest.Title,
-            Descritpion = createTodoRequest.Descritpion,
+            Description = createTodoRequest.Description,
             PercentageOfCompleteness = 0,
             ExpirationDate = createTodoRequest.ExpirationDate,
         };
@@ -65,7 +65,7 @@ public class TodosService : Service
         if(todo == null) return HttpError.BadRequest("Not found Todo item with given Id.");
 
         todo.Title = updateTodoRequest.Title;
-        todo.Descritpion = updateTodoRequest.Descritpion;
+        todo.Description = updateTodoRequest.Description;
         todo.PercentageOfCompleteness = updateTodoRequest.PercentageOfCompleteness;
         todo.ExpirationDate = updateTodoRequest.ExpirationDate;
         
@@ -80,7 +80,7 @@ public class TodosService : Service
         var todo = Db.SingleById<Todo>(updatePercentageRequest.Id);
         if (todo == null) return HttpError.BadRequest("Not found Todo item with given Id.");
 
-        todo.PercentageOfCompleteness = updatePercentageRequest.Percentage;
+        todo.PercentageOfCompleteness = updatePercentageRequest.PercentageOfCompleteness;
 
         Db.Update(todo);
         return todo;

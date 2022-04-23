@@ -31,7 +31,7 @@ public class GetTodosInGivenTime : IReturn<IEnumerable<Todo>>
 public class CreateTodo : IReturn<Todo>
 {
     public string Title { get; set; }
-    public string Descritpion { get; set; }
+    public string Description { get; set; }
     public DateTime ExpirationDate { get; set; }
 }
 #endregion
@@ -42,7 +42,7 @@ public class UpdateTodo : IReturn<Todo>
 {
     public int Id { get; set; }
     public string Title { get; set; }
-    public string Descritpion { get; set; }
+    public string Description { get; set; }
     public int PercentageOfCompleteness { get; set; }
     public DateTime ExpirationDate { get; set; }
 }
@@ -51,7 +51,7 @@ public class UpdateTodo : IReturn<Todo>
 public class UpdatePercentage : IReturn<Todo>
 {
     public int Id { get; set; }
-    public int Percentage { get; set; }
+    public int PercentageOfCompleteness { get; set; }
 }
 #endregion
 
