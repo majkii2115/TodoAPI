@@ -48,7 +48,6 @@ public class TodosService : Service
         {
             Title = createTodoRequest.Title,
             Description = createTodoRequest.Description,
-            PercentageOfCompleteness = 0,
             ExpirationDate = createTodoRequest.ExpirationDate,
         };
 
